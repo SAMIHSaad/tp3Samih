@@ -20,7 +20,7 @@ public class GuideTouristiqueService {
                 .build();
     }
 
-    public String guide(String villeOuPays) {
-        return guide.guide(villeOuPays);
+    public String guide(String villeOuPays, int nb) {
+        return guide.guide(villeOuPays, nb);
     }
 }
