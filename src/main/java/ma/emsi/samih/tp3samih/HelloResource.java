@@ -2,13 +2,14 @@ package ma.emsi.samih.tp3samih;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 
-@Path("/hello-world")
+@Path("personnes/{nom}")
 public class HelloResource {
     @GET
     @Produces("text/plain")
-    public String hello() {
-        return "Hello, World!";
+    public String hello(@PathParam("nom") String nom) {
+        return "Hello, "+nom;
     }
 }
